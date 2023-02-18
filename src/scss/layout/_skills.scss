@@ -1,0 +1,54 @@
+@use '../abstracts/breakpoints' as *;
+
+@include media-down(desktop) {
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: var(--blue);
+        color: white;
+        width: 100%;
+        height: 800px;
+        &__title {
+            font-size: 45px;
+            font-weight: 400;
+        }
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(3, 233px);
+            grid-template-rows: repeat(3, 200px);
+            justify-items: center;
+            align-items: center;
+            width: 700px;
+            height: 500px;
+            margin-top: 60px;
+            img {
+                width: 80px;
+                height: 80px;
+                &:nth-child(7) {
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
+
+@include media-down(phone) {
+    .skills {
+        align-items: flex-start;
+        &__title {
+            font-size: 37px;
+            margin-left: 32px;
+        }
+        &__container {
+            grid-template-columns: repeat(3, 30%);
+            grid-template-rows: repeat(3, 1fr);
+            width: 100%;
+            justify-content: center;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}

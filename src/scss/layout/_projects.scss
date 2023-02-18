@@ -1,0 +1,105 @@
+@use '../abstracts/breakpoints' as *;
+
+@include media-down(desktop) {
+	.projects {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 1000px;
+		background: var(--gray);
+		color: white;
+		&__title {
+			font-size: 45px;
+			font-weight: 400;
+		}
+		&__container {
+			margin-top: 100px;
+			display: grid;
+			width: 1400px;
+			height: 650px;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			justify-items: center;
+			align-items: center;
+			gap: 40px;
+			&-box {
+				display: block;
+				width: 34.375rem;
+				height: 270px;
+				position: relative;
+				border-radius: 30px;
+				img {
+					object-fit: cover;
+					width: 100%;
+					height: 270px;
+					border-radius: 30px;
+				}
+				&:hover img {
+					filter: brightness(0.2);
+					transition: all 0.3s ease;
+				}
+				&-links {
+					display: flex;
+					gap: 50px;
+					font-size: 20px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translateY(-50%) translateX(-50%);
+					visibility: hidden;
+					a {
+						color: white;
+						text-decoration: none;
+						width: 40px;
+						height: 40px;
+						background-repeat: no-repeat;
+						background-size: cover;
+						&:nth-child(1) {
+							background-image: url("../../../public/assets/skills_Icons/link.svg");
+						}
+						&:nth-child(2) {
+							background-image: url("../../../public/assets/skills_Icons/github.svg");
+						}
+					}
+				}
+				&:hover &-links {
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
+
+@include media-down(large_tablet) {
+	.projects {
+		height: inherit;
+		&__container {
+			width: 100%;
+			height: inherit;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(4, 1fr);
+			margin-bottom: 100px;
+		}
+	}
+}
+
+@include media-down(phone) {
+    .projects {
+		&__title {
+			font-size: 37px;
+			align-self: flex-start;
+			margin-left: 32px;
+		}
+		&__container {
+			&-box {
+				width: 340px;
+				height: 167px;
+				img {
+					height: 100%;
+					border-radius: 15px;
+				}
+			}
+		}
+	}
+}

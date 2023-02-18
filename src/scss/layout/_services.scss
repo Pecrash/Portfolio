@@ -1,0 +1,97 @@
+@use '../abstracts/breakpoints' as *;
+
+@include media-down(desktop) {
+    .services {
+        width: 100%;
+        height: 850px;
+        position: relative;
+        color: white;
+        background: var(--blue);
+        text-align: center;
+        &__title {
+            font-size: 45px;
+            font-weight: 400;
+        }
+        &__container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            &-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                width: 30%;
+                height: 37%;
+                position: relative;
+                background-color: #1F1F20;
+                border: 2px solid var(--light-blue);
+                border-radius: 10px;
+                transition: all 0.4s ease;
+                &:hover {
+                    transform: translateY(-20px);
+                    box-shadow: 0 15px 25px rgb(29, 29, 100);
+                    transition: all 0.4s ease;
+                }
+                h2 {
+                    font-size: 30px;
+                    font-weight: 400;
+                    margin-top: 15px;
+                }
+                img {
+                    width: 90px;
+                    height: 90px;
+                    filter: brightness(0.8);
+                    position: absolute;
+                    left: 30px;
+                    top: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include media-down(large_tablet) {
+    .services {
+        height: initial;
+        padding: 70px 0 100px 0;
+        &__container {
+            flex-direction: column;
+            margin-top: 100px;
+            &-item {
+                width: 70%;
+                height: 300px;
+            }
+        }
+    }
+}
+
+@include media-down(phone) {
+    .services {
+        text-align: start;
+        &__title {
+            font-size: 37px;
+            margin-left: 32px;
+        }
+        &__container {
+            &-item {
+                width: 340px;
+                height: 230px;
+                h2 {
+                    font-size: 24px;
+                    max-width: 225px;
+                }
+                img {
+                    width: 45px;
+                    height: 45px;
+                    left: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+@use '../abstracts/breakpoints' as *;
+
+@include media-down(desktop) {
+	.contact {
+		background: #1f1f20;
+		width: 100%;
+		height: 1000px;
+		position: relative;
+		&__tittle {
+			text-align: center;
+			color: white;
+			font-size: 45px;
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+		&__media {
+			display: flex;
+			position: absolute;
+			flex-direction: column;
+			gap: 20px;
+			top: 50%;
+			right: 70px;
+			transform: translateY(-50%);
+			&-icon {
+				width: 45px;
+				height: 45px;
+				&:hover {
+					filter: brightness(1.5);
+				}
+				img {
+					width: 45px;
+					height: 45px;
+				}
+			}
+		}
+		&__section {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			padding-top: 6.875rem;
+			align-items: center;
+			margin-bottom: 1.25rem;
+			gap: 0.9375rem;
+			&_form {
+				position: relative;
+				width: 55%;
+				overflow: hidden;
+				padding-top: 2.5em;
+				&-box {
+					display: block;
+					position: relative;
+					width: 100%;
+					height: 2.625em;
+					margin-bottom: 2.5em;
+					color: rgb(209, 207, 207);
+					border: none;
+					border-bottom: 2.8px solid rgb(209, 207, 207);
+					outline: 0;
+					font-size: 1.45em;
+					font-weight: lighter;
+					background: transparent;
+					resize: none;
+	
+					&.message {
+						height: 7.1875em;
+						font-family: "Montserrat", sans-serif;
+					}
+				}
+				&-label {
+					width: 100%;
+					height: 2.0625em;
+					font-size: 1.45em;
+					position: absolute;
+					left: 0;
+					margin-top: -4.53em;
+					color: rgba($color: #ffffff, $alpha: 0.4);
+					pointer-events: none;
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: 0.6px;
+						width: 100%;
+						height: 100%;
+						border-bottom: 3.2px solid var(--light-blue);
+						transform: translateX(-100%);
+						transition: all 0.3s ease;
+					}
+	
+					span {
+						position: absolute;
+						transition: all 0.3s ease;
+					}
+	
+					&.message {
+						span {
+							margin-top: -5.7em;
+						}
+					}
+				}
+	
+				&-box:focus + &-label span,
+				&-box:valid + &-label span {
+					transform: translateY(-150%);
+					font-size: 0.875em;
+					color: #5959a5;
+				}
+				/* &-box:focus + &-label.message span,&-box:valid + &-label.message span {
+					transform: translateY(-450%);
+				} */
+				&-box:focus + &-label::after,
+				&-box:valid + &-label::after {
+					transform: translateX(0%);
+				}
+	
+				&-submit {
+					text-align: center;
+					&-btn {
+						width: 12.5em;
+						height: 2.5em;
+						border-radius: 1.25em;
+						color: rgb(209, 207, 207);
+						border: 3px solid rgb(209, 207, 207);
+						font-family: "Montserrat", sans-serif;
+						font-size: 1.3em;
+						background: transparent;
+						&:hover {
+							color: #5959a5;
+							border-color: #5959a5;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include media-down(phone) {
+	.contact {
+		&__tittle {
+			font-size: 37px;
+			margin-left: 32px;
+			align-self: flex-start;
+		}
+		&__media {
+			flex-direction: row;
+			right: 50%;
+			top: 90%;
+			height: 45px;
+			transform: translateX(50%);
+		}
+		&__section {
+			&_form {
+				width: 80%;
+			}
+		}
+	}
+}
+
+
