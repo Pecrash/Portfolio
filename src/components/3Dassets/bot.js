@@ -8,7 +8,7 @@ function Bot(props) {
 
 	useEffect(() => {
 		actions?.Greeting?.play()
-	}, [])
+	}, [actions?.Greeting])
 
 	return (
 		<group ref={group} {...props} dispose={null}>
