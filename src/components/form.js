@@ -78,9 +78,9 @@ const Form = () => {
 				</form>
 			</section>
 			<section className="contact__media">
-				<a href="#" className="contact__media-icon"><img src="/assets/media_icons/facebook.svg" alt="" /></a>
-				<a href="#" className="contact__media-icon"><img src="/assets/media_icons/instagram.svg" alt="" /></a>
-				<a href="#" className="contact__media-icon"><img src="/assets/media_icons/whatsapp.svg" alt="" /></a>
+				<a href="https://www.instagram.com/pecrash/" className="contact__media-icon"><img src="/assets/media_icons/facebook.svg" alt="" /></a>
+				<a href="https://www.instagram.com/pecrash/" className="contact__media-icon"><img src="/assets/media_icons/instagram.svg" alt="" /></a>
+				<a href="https://www.instagram.com/pecrash/" className="contact__media-icon"><img src="/assets/media_icons/whatsapp.svg" alt="" /></a>
 			</section>
 		</div>
 	);
