@@ -25,7 +25,7 @@ const Form = () => {
 						name="name"
 						required
 					/>
-					<label for="" class="contact__section_form-label">
+					<label className="contact__section_form-label">
 						<span>Tu Nombre</span>
 					</label>
 
@@ -35,7 +35,7 @@ const Form = () => {
 						name="phone"
 						required
 					/>
-					<label for="" class="contact__section_form-label">
+					<label className="contact__section_form-label">
 						<span>Número de Teléfono</span>
 					</label>
 
@@ -45,7 +45,7 @@ const Form = () => {
 						name="email"
 						required
 					/>
-					<label for="" class="contact__section_form-label">
+					<label className="contact__section_form-label">
 						<span>Correo</span>
 					</label>
 
@@ -54,7 +54,7 @@ const Form = () => {
 						name="subject"
 						required
 					></textarea>
-					<label for="" class="contact__section_form-label message">
+					<label className="contact__section_form-label message">
 						<span>Mensaje</span>
 					</label>
 
