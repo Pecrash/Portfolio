@@ -41,6 +41,7 @@
 				}
 				&-links {
 					display: flex;
+					position: relative;
 					gap: 50px;
 					font-size: 20px;
 					position: absolute;
@@ -57,9 +58,19 @@
 						background-size: cover;
 						&:nth-child(1) {
 							background-image: url("../../../public/assets/skills_Icons/link.svg");
+							p {
+								position: absolute;
+								bottom: -40px;
+								transform: translate(13%);
+							}
 						}
 						&:nth-child(2) {
 							background-image: url("../../../public/assets/skills_Icons/github.svg");
+							p {
+								position: absolute;
+								bottom: -40px;
+								transform: translate(-13%);
+							}
 						}
 					}
 				}
@@ -98,6 +109,26 @@
 				img {
 					height: 100%;
 					border-radius: 15px;
+				}
+				&-links {
+					font-size: 18px;
+					transform: translateY(-80%) translateX(-50%);
+					a {
+						width: 30px;
+						height: 30px;
+						&:nth-child(1) {
+							p {
+								bottom: -33px;
+								transform: initial;
+							}
+						}
+						&:nth-child(2) {
+							p {
+								bottom: -33px;
+								transform: translate(-20%);
+							}
+						}
+					}
 				}
 			}
 		}

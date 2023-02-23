@@ -39,16 +39,16 @@
                     transition: all 0.4s ease;
                 }
                 h2 {
-                    font-size: 30px;
+                    font-size: 28px;
                     font-weight: 400;
                     margin-top: 15px;
                 }
                 img {
-                    width: 90px;
-                    height: 90px;
+                    width: 70px;
+                    height: 70px;
                     filter: brightness(0.8);
                     position: absolute;
-                    left: 30px;
+                    left: 20px;
                     top: 20px;
                 }
             }
@@ -82,6 +82,7 @@
             &-item {
                 width: 340px;
                 height: 230px;
+                text-align: center;
                 h2 {
                     font-size: 24px;
                     max-width: 225px;
