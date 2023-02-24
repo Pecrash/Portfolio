@@ -1,41 +1,54 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 /* import { OrbitControls } from "@react-three/drei"; */
 import Bot from "./bot";
 import Camera from "./camera";
 
 const Model = () => {
 	const canvasRef = useRef(null);
-	const [visible, setVisible] = useState(false)
+	const [visible, setVisible] = useState(false);
+	const canvasRefCallback = useCallback((node) => {
+		canvasRef.current = node;
+	}, []);
 
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				// El elemento es visible
-				setVisible(true)
-			} else {
-				// El elemento no es visible
-				setVisible(false)
-			}
-		});
-	});
+	const observer = useMemo(
+		() =>
+			new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						// El elemento es visible
+						setVisible(true);
+					} else {
+						// El elemento no es visible
+						setVisible(false);
+					}
+				});
+			}),
+		[]
+	);
 
 	useEffect(() => {
-		if (canvasRef.current) {
-			observer.observe(canvasRef.current);
+		const canvas = canvasRef.current;
+
+		if (canvas) {
+			observer.observe(canvas);
 		}
 
 		return () => {
-			if (canvasRef.current) {
-				observer.unobserve(canvasRef.current);
+			const currentCanvas = canvasRef.current;
+
+			if (currentCanvas) {
+				observer.unobserve(currentCanvas);
 			}
 		};
-	}, [canvasRef]);
+	}, [canvasRef, observer, canvasRefCallback]);
 
 	return (
 		<div className="introduction__canvas" ref={canvasRef}>
-			<div className={`introduction__canvas_container ${visible ? '' : 'hidden'}`} >
+			<div
+				className={`introduction__canvas_container ${visible ? "" : "hidden"}`}
+			>
 				<Canvas /* style={{ height: "80vh", width: "40%" }} */>
 					{/* <OrbitControls /> */}
 					<Camera />
