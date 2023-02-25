@@ -1,5 +1,5 @@
 import React from "react";
-import Model from "../components/3Dassets/3Dmodel";
+
 import Header from "../components/header";
 
 const Introduction = () => {
@@ -17,7 +17,7 @@ const Introduction = () => {
 						to each <br/> of my jobs."
 					</p>
 				</section>
-				<Model />
+				
 			</div>
 		</React.Fragment>
 	);
