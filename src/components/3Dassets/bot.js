@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, memo } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
 function Bot(props) {
@@ -11,7 +11,7 @@ function Bot(props) {
 	}, [actions?.Greeting])
 
 	return (
-		<group ref={group} {...props} dispose={null}>
+		<group ref={group} {...props} dispose={null} frustumCulled={true}>
 			<group name="Scene">
 				<group name="Armature" position={[0, 1, 0]} scale={0.15}>
 					<primitive object={nodes.Neck} />
@@ -120,4 +120,4 @@ function Bot(props) {
 }
 
 useGLTF.preload("/assets/3Dbot/bot.glb");
-export default Bot;
+export default memo(Bot);

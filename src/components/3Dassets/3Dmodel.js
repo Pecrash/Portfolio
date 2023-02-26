@@ -1,16 +1,26 @@
 import React, { Suspense, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useState, useEffect, useRef, useCallback } from "react";
-/* import { OrbitControls } from "@react-three/drei"; */
+import { PerspectiveCamera } from "@react-three/drei";
 import Bot from "./bot";
-import Camera from "./camera";
 
 const Model = () => {
 	const canvasRef = useRef(null);
+	const [position, setPosition] = useState(0);
 	const [visible, setVisible] = useState(false);
 	const canvasRefCallback = useCallback((node) => {
 		canvasRef.current = node;
 	}, []);
+
+	const Camera = () => {
+		return(
+			<PerspectiveCamera 
+			makeDefault
+			position={[position,1,10]}
+			fov={23}
+			/>
+		)
+	};
 
 	const observer = useMemo(
 		() =>
@@ -19,9 +29,11 @@ const Model = () => {
 					if (entry.isIntersecting) {
 						// El elemento es visible
 						setVisible(true);
+						setPosition(0)
 					} else {
 						// El elemento no es visible
 						setVisible(false);
+						setPosition(10)
 					}
 				});
 			}),
@@ -53,7 +65,7 @@ const Model = () => {
 					{/* <OrbitControls /> */}
 					<Camera />
 					<Suspense fallback={null}>
-						<Bot />
+						<Bot frustumCulled={true} />
 					</Suspense>
 				</Canvas>
 			</div>
