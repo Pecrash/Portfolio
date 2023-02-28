@@ -1,4 +1,4 @@
-@use '../abstracts/breakpoints' as *;
+@use "../abstracts/breakpoints" as *;
 
 @include media-down(desktop) {
 	.contact {
@@ -37,11 +37,12 @@
 			width: 100%;
 			height: 100%;
 			display: flex;
+			position: relative;
 			flex-direction: column;
 			padding-top: 6.875rem;
 			align-items: center;
-			margin-bottom: 1.25rem;
 			gap: 0.9375rem;
+
 			&_form {
 				position: relative;
 				width: 55%;
@@ -61,7 +62,7 @@
 					font-weight: lighter;
 					background: transparent;
 					resize: none;
-	
+
 					&.message {
 						height: 7.1875em;
 						font-family: "Montserrat", sans-serif;
@@ -87,19 +88,19 @@
 						transform: translateX(-100%);
 						transition: all 0.3s ease;
 					}
-	
+
 					span {
 						position: absolute;
 						transition: all 0.3s ease;
 					}
-	
+
 					&.message {
 						span {
 							margin-top: -5.7em;
 						}
 					}
 				}
-	
+
 				&-box:focus + &-label span,
 				&-box:valid + &-label span {
 					transform: translateY(-150%);
@@ -113,7 +114,7 @@
 				&-box:valid + &-label::after {
 					transform: translateX(0%);
 				}
-	
+
 				&-submit {
 					text-align: center;
 					&-btn {
@@ -130,6 +131,28 @@
 							border-color: #5959a5;
 						}
 					}
+				}
+			}
+
+			&_return {
+				width: 70%;
+				height: 400px;
+				text-align: center;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				color: white;
+				font-size: 35px;
+				h1 {
+					font-weight: 400;
+				}
+				img {
+					width: 100%;
+					max-width: 500px;
+					animation-duration: 2s;
+					animation-name:  scaleUp;
+					animation-iteration-count: 1;
+					transform-origin: center;
 				}
 			}
 		}
@@ -154,8 +177,20 @@
 			&_form {
 				width: 80%;
 			}
+
+			&_return {
+				font-size: 25px;
+			}
 		}
 	}
 }
 
+@keyframes scaleUp {
+	from {
+		transform: scale(0);
+	}
 
+	to {
+		transform: scale(1);
+	}
+}

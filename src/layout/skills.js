@@ -3,7 +3,7 @@ import React from "react";
 const Skills = () => {
 	return(
         <div className="skills" id="skills">
-            <h1 className="skills__title">My Skills</h1>
+            <h1 className="skills__title" data-section="skills" data-value="title">My Skills</h1>
             <section className="skills__container">
                 <img src="/assets/skills_Icons/HTML5.svg" alt="" />
                 <img src="/assets/skills_Icons/css.svg" alt="" />

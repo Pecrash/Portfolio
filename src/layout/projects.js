@@ -3,7 +3,7 @@ import React from "react";
 const Projects = () => {
 	return (
 		<div className="projects" id="projects">
-			<h1 className="projects__title">Projects</h1>
+			<h1 className="projects__title" data-section="projects" data-value="title">Projects</h1>
 			<section className="projects__container">
 				<span className="projects__container-box">
 					<img src="/assets/Projects_views/Odontologia.png" alt="" />
