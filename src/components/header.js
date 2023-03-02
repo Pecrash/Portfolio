@@ -1,15 +1,26 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 
 const Header = () => {
-	return(
-        <div className="header">
-            <a href="#about" data-section="header" data-value="about" >About me</a>
-            <a href="#skills" data-section="header" data-value="skills" >My Skills</a>
-            <a href="#projects" data-section="header" data-value="projects" >Projects</a>
-            <a href="#contact" data-section="header" data-value="services" >Contact me</a>
-            <a href="#services" data-section="header" data-value="contact" >Services</a>
-        </div>
-    ) 
+	return (
+		<div className="header">
+			<a href="#about">
+				<FormattedMessage id="header.about" defaultMessage={"About me"} />
+			</a>
+			<a href="#skills">
+				<FormattedMessage id="header.skills" defaultMessage={"My Skills"} />
+			</a>
+			<a href="#projects">
+				<FormattedMessage id="header.projects" defaultMessage={"Projects"} />
+			</a>
+			<a href="#contact">
+				<FormattedMessage id="header.contact" defaultMessage={"Contact me"} />
+			</a>
+			<a href="#services">
+				<FormattedMessage id="header.services" defaultMessage={"Services"} />
+			</a>
+		</div>
+	);
 };
 
 export default Header;

@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { FormattedMessage } from "react-intl";
 
 const Form = () => {
 	const [state, handleSubmit] = useForm("xgebaqre");
@@ -19,7 +20,9 @@ const Form = () => {
 	return (
 		<div className="contact" id="contact">
 			<section className="contact__section" id="form">
-				<h1 className="contact__tittle" data-section="form" data-value="title">Contact me</h1>
+				<h1 className="contact__tittle">
+					<FormattedMessage id="form.title" defaultMessage={"Contact me"} />
+				</h1>
 				<form
 					onSubmit={handleSubmit}
 					className="contact__section_form"
@@ -35,7 +38,9 @@ const Form = () => {
 						required
 					/>
 					<label className="contact__section_form-label">
-						<span data-section="form" data-value="name">Tu Nombre</span>
+						<span>
+							<FormattedMessage id="form.name" defaultMessage={"Name"} />
+						</span>
 					</label>
 					<ValidationError prefix="Name" field="name" errors={state.errors} />
 
@@ -46,7 +51,9 @@ const Form = () => {
 						required
 					/>
 					<label className="contact__section_form-label">
-						<span data-section="form" data-value="phone">Número de Teléfono</span>
+						<span>
+							<FormattedMessage id="form.phone" defaultMessage={"Phone"} />
+						</span>
 					</label>
 					<ValidationError prefix="Phone" field="phone" errors={state.errors} />
 
@@ -57,7 +64,9 @@ const Form = () => {
 						required
 					/>
 					<label className="contact__section_form-label">
-						<span data-section="form" data-value="email">Correo</span>
+						<span>
+							<FormattedMessage id="form.email" defaultMessage={"Email"} />
+						</span>
 					</label>
 
 					<textarea
@@ -66,15 +75,21 @@ const Form = () => {
 						required
 					></textarea>
 					<label className="contact__section_form-label message">
-						<span data-section="form" data-value="message">Mensaje</span>
+						<span>
+							<FormattedMessage id="form.message" defaultMessage={"Message"} />
+						</span>
 					</label>
 
 					<div className="contact__section_form-submit">
-						<input
-							type="submit"
-							className="contact__section_form-submit-btn"
-							value="Enviar"
-						/>
+						<FormattedMessage id="form.send" defaultMessage={"Send"}>
+							{(submitMessage) => (
+								<input
+									type="submit"
+									className="contact__section_form-submit-btn"
+									value={submitMessage}
+								/>
+							)}
+						</FormattedMessage>
 					</div>
 				</form>
 			</section>

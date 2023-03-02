@@ -1,0 +1,38 @@
+{
+		"header.about": "Sobre mi",
+		"header.skills": "Mis Habilidades",
+		"header.projects": "Proyectos",
+		"header.services": "Servicios",
+		"header.contact": "Contáctame",
+	
+		"introduction.title": "Hola, soy un desarrollador Frontend",
+		"introduction.paragraph": "'Soy un desarrollador apasionado por el diseño y el aprendizaje, constantemente me esfuerzo por aprender diversas tecnologías que contribuyan significativamente a cada uno de mis trabajos'.",
+
+        "about.title": "Sobre mí",
+        "about.paragraph": "Soy una persona apasionada por aprender, amo el arte y creo que el código puede llevar cada una de mis pasiones aún más lejos. Soy un desarrollador frontend junior que busca oportunidades y espero que este portafolio pueda hablar un poco más sobre mí, mi trabajo y lo que puedo hacer para ayudarte.",
+
+        "skills.title": "Mis Habilidades",
+
+        "projects.title": "Proyectos",
+
+        "services.title": "Servicios",
+        "services.web": "Desarrollo Web",
+        "services.webP": "Desarrollaré y diseñaré tu sitio web a la medida, cubriendo tus necesidades específicas.",
+        "services.responsive": "Diseño Responsivo",
+        "services.responsiveP": "Diseño compatible con diferentes tipos de dispositivos para crear la mejor experiencia de usuario posible.",
+        "services.illustration": "Ilustración",
+        "services.illustrationP": "Puedo ayudarte a dar vida exactamente a lo que imaginas a través de ilustraciones y representaciones gráficas.",
+        "services.modeling": "Modelado 3D",
+        "services.modelingP": "Su sitio web se destacará aún más si cobra vida con diseños y animaciones en 3D.",
+        "services.media": "Integración de Redes Sociales",
+        "services.mediaP": "Su sitio web y las redes sociales deben funcionar juntos a la perfección, lo ayudaré con estrategias para retener el tráfico de su sitio web.",
+
+        "form.title": "Contáctame",
+        "form.name": "Tu Nombre",
+        "form.phone": "Número de Teléfono",
+        "form.email": "Correo",
+        "form.message": "Mensaje",
+        "form.send": "Enviar",
+
+        "btn.text": "Switch to English"
+}

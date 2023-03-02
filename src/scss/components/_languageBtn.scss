@@ -1,0 +1,14 @@
+.btn {
+    width: 12.5rem;
+    height: 3.125rem;
+    background: #1F1F20;
+    color: white;
+    border: 2px solid var(--light-blue);
+    border-radius: 1.5625rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.0625em;
+
+    &:hover {
+        filter: brightness(1.3);
+    }
+}

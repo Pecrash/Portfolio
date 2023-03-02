@@ -1,0 +1,38 @@
+{
+		"header.about": "About Me",
+		"header.skills": "My Skills",
+		"header.projects": "Projects",
+		"header.services": "Services",
+		"header.contact": "Contact",
+
+		"introduction.title": "Hello, I’m a junior frontend developer",
+		"introduction.paragraph": "I am a passionate developer for design and learning, constantly striving to learn various technologies that significantly contribute to each of my jobs.",
+
+        "about.title": "About me",
+        "about.paragraph": "I am someone passionate about learning, I love art, and I believe that code can take each of my passions even further. I am a junior frontend developer looking for opportunities and I hope that this portfolio can speak a bit more about me, my work, and what I can do to help you.",
+
+        "skills.title": "My Skills",
+
+        "projects.title": "Projects",
+
+        "services.title": "Services",
+        "services.web": "Web Development",
+        "services.webP": "I develop and design your custom website, covering your specific needs.",
+        "services.responsive": "Responsive Design",
+        "services.responsiveP": "I design for compatibility with different types of devices to create the best possible user experience.",
+        "services.illustration": "Illustration",
+        "services.illustrationP": "I can help you bring to life exactly what you imagine through illustrations and graphic representations.",
+        "services.modeling": "3D Modeling",
+        "services.modelingP": "Your website will stand out even more if it comes to life with 3D designs and animations.",
+        "services.media": "Social Media Integration",
+        "services.mediaP": "Your website and social media should work together seamlessly, I will help you with strategies to retain the traffic of your website.",
+
+        "form.title": "Contact me",
+        "form.name": "Your name",
+        "form.phone": "Phone Number",
+        "form.email": "Email",
+        "form.message": "Message",
+        "form.send": "Send",
+
+        "btn.text": "Cambiar al Español"
+}
