@@ -53,7 +53,7 @@ const Projects = () => {
 					<img src="/assets/Projects_views/Peluqueria.png" alt="" />
 					<div className="projects__container-box-links">
 						<a
-							href="https://muestra-webpeluqueria-production.up.railway.app/"
+							href="https://muestra-webpeluqueria-production-c79a.up.railway.app/"
 							target="_blank"
 							rel="noreferrer"
 						>
