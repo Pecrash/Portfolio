@@ -98,6 +98,7 @@ const Form = () => {
 					href="https://www.facebook.com/profile.php?id=100090796002084"
 					className="contact__media-icon"
 					target={"_blank"}
+					rel={"noopener noreferrer"}
 				>
 					<img src="/assets/media_icons/facebook.svg" alt="" />
 				</a>
@@ -105,6 +106,7 @@ const Form = () => {
 					href="https://www.instagram.com/pecrash_dev/?igshid=YmMyMTA2M2Y%3D"
 					className="contact__media-icon"
 					target={"_blank"}
+					rel={"noopener noreferrer"}
 				>
 					<img src="/assets/media_icons/instagram.svg" alt="" />
 				</a>
@@ -112,6 +114,7 @@ const Form = () => {
 					href="https://wa.me/message/KE2UQDJTG75UG1"
 					className="contact__media-icon"
 					target={"_blank"}
+					rel={"noopener noreferrer"}
 				>
 					<img src="/assets/media_icons/whatsapp.svg" alt="" />
 				</a>
@@ -119,6 +122,7 @@ const Form = () => {
 					href="https://twitter.com/PecrashDev"
 					className="contact__media-icon"
 					target={"_blank"}
+					rel={"noopener noreferrer"}
 				>
 					<img src="/assets/media_icons/twitter.svg" alt="" />
 				</a>
